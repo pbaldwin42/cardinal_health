@@ -5,13 +5,13 @@ public interface CoinHelper {
     int NICKLE_DIAMETER = 21210; // 20,786 21,634
     int NICKLE_THICKNESS = 1950;
 
-    int DIME_WEIGHT = 2268;
+    int DIME_WEIGHT = 2268; // 2,223 2,313
     int DIME_DIAMETER = 17910;
     int DIME_THICKNESS = 1350;
 
     int QUARTER_WEIGHT = 5670;
     int QUARTER_DIAMETER = 24660;
-    int QUARTER_THICKNESS = 1750;
+    int QUARTER_THICKNESS = 1750; // 1,715 1,785
 
     // percentage of tolerance
     double TOLERANCES = 0.02;

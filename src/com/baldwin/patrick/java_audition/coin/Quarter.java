@@ -7,12 +7,12 @@ public class Quarter extends Coin {
         this.thickness = CoinHelper.QUARTER_THICKNESS;
     }
     public Quarter(int weightInGrams, int diameterInMicrometers,
-                  int thicknessInMicrometers) {
+                  int thicknessInMicrometers) throws Exception {
         this.weight = weightInGrams;
         this.diameter = diameterInMicrometers;
         this.thickness = thicknessInMicrometers;
-        if (!CoinHelper.isNickel(this)) {
-            throw new Error("Quarter generated outside of tolerances\n" + this);
+        if (!CoinHelper.isQuarter(this)) {
+            throw new IllegalArgumentException("Quarter generated outside of tolerances\n" + this);
         }
     }
 }

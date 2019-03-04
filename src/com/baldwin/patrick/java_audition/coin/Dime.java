@@ -7,12 +7,12 @@ public class Dime extends Coin {
         this.thickness = CoinHelper.DIME_THICKNESS;
     }
     public Dime(int weightInGrams, int diameterInMicrometers,
-                  int thicknessInMicrometers) {
+                  int thicknessInMicrometers) throws Exception {
         this.weight = weightInGrams;
         this.diameter = diameterInMicrometers;
         this.thickness = thicknessInMicrometers;
-        if (!CoinHelper.isNickel(this)) {
-            throw new Error("Dime generated outside of tolerances\n" + this);
+        if (!CoinHelper.isDime(this)) {
+            throw new IllegalArgumentException("Dime generated outside of tolerances\n" + this);
         }
     }
 }

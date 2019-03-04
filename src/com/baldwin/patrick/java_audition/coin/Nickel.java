@@ -7,12 +7,12 @@ public class Nickel extends Coin {
         this.thickness = CoinHelper.NICKLE_THICKNESS;
     }
     public Nickel(int weightInGrams, int diameterInMicrometers,
-                  int thicknessInMicrometers) {
+                  int thicknessInMicrometers) throws Exception {
         this.weight = weightInGrams;
         this.diameter = diameterInMicrometers;
         this.thickness = thicknessInMicrometers;
         if (!CoinHelper.isNickel(this)) {
-            throw new Error("Nickle generated outside of tolerances\n" + this);
+            throw new IllegalArgumentException("Nickle generated outside of tolerances\n" + this);
         }
     }
 }
