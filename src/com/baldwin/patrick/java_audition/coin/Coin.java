@@ -15,6 +15,14 @@ public abstract class Coin {
         return thickness;
     }
 
+    // percentage of tolerance
+    private static double TOLERANCES = 0.02;
+
+    public static boolean withinTolerance(int target, int referenceBase) {
+        return (target >= referenceBase * (1 - TOLERANCES) &&
+                target <= referenceBase * (1 + TOLERANCES));
+    }
+
     @Override
     public String toString() {
         String result;
